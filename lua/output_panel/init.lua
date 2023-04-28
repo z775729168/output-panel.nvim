@@ -54,7 +54,7 @@ function M.render()
 
     vim.list_extend(lines, lines_by_lsp[current_tab])
     vim.api.nvim_buf_set_lines(output_panel_bufnr, 0, -1, false, lines)
-    vim.keymap.set('n', 'q', '<cmd>q!<CR>', { noremap = true, silent = true, buffer = output_panel_bufnr})
+    vim.keymap.set('n', 'q', '<cmd>q!<CR>', { noremap = true, silent = true, buffer = current_tab})
   end
 end
 
